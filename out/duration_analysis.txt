@@ -1,0 +1,5 @@
+Analysing dataset duration 
+
+game condition: mean 481.424 sd 1.0
+tool condition: mean 484.424 sd 1.0
+Ttest_indResult(statistic=-3.6742346141747673, pvalue=0.021311641128756727) -3.0

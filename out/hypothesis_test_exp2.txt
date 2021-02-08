@@ -1,0 +1,30 @@
+Analysing dataset data 
+
+Hypothesis 1: Enjoyment (DV1) will be greater in the game condition than the task condition.
+    A one-tailed two-sample t-test will be used to test whether the mean scores of DV1 is greater
+    in the game condition than the task condition. α = 0.05.
+Game mean 2.142857142857143 sd 0.6060915267313266
+mean Tool 2.5238095238095237 sd 0.2973808570665905
+one tailed t test: p = 0.19972061196496843 ; t = -0.9797958971132709 ; significant = False ; d = -0.8944271909999155 
+
+
+Hypothesis 2: Proportion of valid data (DV2) will be lower in the game condition
+    than the task condition. A two-tailed Mann-Whitney U test will be used to test
+    whether the distribution of DV2 differs significantly between the game condition
+    than the task condition. α = 0.05
+Game mean 0.25 sd 0.21213203435596428
+mean Tool 0.26666666666666666 sd 0.37859388972001823
+Mann-Whitney U test: p = 0.5 ; U = 2.5 ; significant = False ; d = -0.05012547071170854 
+
+
+Hypothesis 3: Time per input (DV3) will be higher in the game condition than
+    the task condition. A two-tailed two-sample t-test will be used to test whether
+    scores of DV3 are greater in the game condition than the task condition. α =
+    0.05
+Game mean 0.4105263157894737 sd 0.014886458551295705
+mean Tool 0.4 sd 0.0
+two tailed t test: p = 0.27222840122441816 ; t = 1.341640786499867 ; significant = False ; d = 1.224744871391589 
+
+
+every-day    5
+Name: gaming_frequency, dtype: int64

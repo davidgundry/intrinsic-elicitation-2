@@ -1,0 +1,128 @@
+{
+  "_id": "5f118222b0e1d1670001ce11",
+  "data": {
+    "gameVersion": "Tool",
+    "loadTime": 1594982440874,
+    "uploadTime": 1594982944816,
+    "duration": 485.424,
+    "playDuration": 480.002,
+    "answers": [
+      "27",
+      "female",
+      "english",
+      "every-day",
+      "1",
+      "2",
+      "2",
+      "2",
+      "2",
+      "2",
+      "2",
+      "red big square",
+      "big red square",
+      "big filled square",
+      null,
+      null,
+      null
+    ],
+    "moves": [
+      [
+        "circle",
+        "square",
+        "triangle"
+      ],
+      [
+        "filled",
+        "empty",
+        "green"
+      ],
+      [
+        "red",
+        "green",
+        "blue"
+      ],
+      [
+        "big",
+        "empty",
+        "circle"
+      ],
+      [
+        "small",
+        "empty",
+        "triangle"
+      ],
+      [
+        "small",
+        "empty",
+        "triangle"
+      ],
+      [
+        "filled",
+        "empty",
+        "green"
+      ],
+      [
+        "red",
+        "green",
+        "blue"
+      ],
+      [
+        "big",
+        "triangle",
+        "empty"
+      ],
+      [
+        "small",
+        "empty",
+        "triangle"
+      ],
+      [
+        "small",
+        "empty",
+        "circle"
+      ],
+      [
+        "red",
+        "green",
+        "blue"
+      ],
+      [
+        "empty",
+        "filled",
+        "green"
+      ],
+      [
+        "empty",
+        "filled",
+        "green"
+      ],
+      [
+        "green",
+        "red",
+        "blue"
+      ]
+    ],
+    "moveDurations": [
+      1.5314450000005309,
+      1.916494999999486,
+      1.7831050000004325,
+      5.033134999999675,
+      4.784264999998413,
+      7.050825000000259,
+      1.1063899999990099,
+      2.8494300000002113,
+      9.9504450000004,
+      3.452929999999469,
+      11.851834999999483,
+      79.11336499999923,
+      2.4985599999999977,
+      34.44956000000093,
+      3.0330149999990828
+    ]
+  },
+  "version": "1.0.0.IEX-enj-dataq-1.0.0.Tool",
+  "studyID": "daa2e38ef9864764b95f4e545",            
+  "prolificPID": "6440a9870c404843a195ba4a",
+  "sessionID": "501617b49a904139b1608183",
+  "uid": 176
+}
