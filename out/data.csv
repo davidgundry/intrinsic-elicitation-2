@@ -1,7 +1,7 @@
 version,language,gaming_frequency,imi1,imi2,imi3,imi4,imi5,imi6,imi7,g-rbs,g-brs,g-bfs,g-frs,g-rfs,g-fbs,bug,bugdesc,imi_enjoyment,total_moves,moves_with_noun,grammatical_moves,proportion_of_valid_data_total,proportion_of_valid_data_providing_mechanic_actuations_total,moves_with_noun_last10,grammatical_moves_last10,proportion_of_valid_data_last10,proportion_of_valid_data_providing_mechanic_actuations_last10,time_per_input_from_moveDurations,time_per_input_from_8min
-Game,english,every-day,1,2,2,2,3,2,2,g,g,g,ng,ng,ng,nobug,,2.5714285714285716,20,19,2,0.1,0.10526315789473684,10,1,0.1,0.1,11.333653333333109,0.4
-Game,english,every-day,1,1,2,6,2,2,2,g,g,g,ng,ng,ng,nobug,,1.7142857142857142,19,18,10,0.5263157894736842,0.5555555555555556,9,4,0.4,0.4444444444444444,11.340319999999775,0.42105263157894735
-Tool,english,every-day,1,2,5,2,4,2,2,g,g,g,ng,ng,ng,nobug,,2.2857142857142856,20,18,8,0.4,0.4444444444444444,10,1,0.1,0.1,11.353653333333108,0.4
+Game,english,almost-never,1,2,2,2,3,2,2,g,g,g,ng,ng,ng,bug,bug message,2.5714285714285716,20,19,2,0.1,0.10526315789473684,10,1,0.1,0.1,11.333653333333109,0.4
+Game,english,every-day,1,1,2,6,2,2,2,g,g,g,ng,g,ng,nobug,,1.7142857142857142,19,18,10,0.5263157894736842,0.5555555555555556,9,4,0.4,0.4444444444444444,11.340319999999775,0.42105263157894735
+Tool,english,every-day,1,2,5,2,4,2,2,g,g,ng,ng,ng,ng,nobug,,2.2857142857142856,20,18,4,0.2,0.2222222222222222,10,1,0.1,0.1,11.353653333333108,0.4
 Game,english,every-day,1,2,2,2,2,6,2,g,g,g,ng,ng,ng,nobug,,3.0,1,1,0,0.0,0.0,1,0,0.0,0.0,11.346986666666442,8.0
-Tool,english,every-day,1,4,2,1,2,2,2,g,g,g,ng,ng,ng,nobug,,2.857142857142857,20,19,13,0.65,0.6842105263157895,10,7,0.7,0.7,11.360319999999776,0.4
-Tool,english,every-day,1,2,3,4,2,5,2,g,g,g,ng,ng,ng,nobug,,2.4285714285714284,20,20,0,0.0,0.0,10,0,0.0,0.0,11.366986666666442,0.4
+Tool,english,every-day,1,4,2,1,2,2,2,g,g,g,ng,g,ng,nobug,,2.857142857142857,20,19,13,0.65,0.6842105263157895,10,7,0.7,0.7,11.360319999999776,0.4
+Tool,english,every-day,1,2,3,4,2,5,2,g,ng,g,ng,ng,ng,nobug,,2.4285714285714284,20,20,0,0.0,0.0,10,0,0.0,0.0,11.366986666666442,0.4

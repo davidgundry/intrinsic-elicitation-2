@@ -22,6 +22,7 @@ def process_data(rawData):
     duration, gaming_frequency = [], []
     imi1, imi2, imi3, imi4, imi5, imi6, imi7, imi_enjoyment = [], [], [], [], [], [], [], []
     g1, g2, g3, g4, g5, g6 = [], [], [], [], [], []
+    bug, bugdesc = [], []
     grammatical_moves, moves_with_noun, total_moves = [], [] ,[]
     proportion_of_valid_data, proportion_of_valid_data_providing_mechanic_actuations = [], []
     grammatical_moves_last10, moves_with_noun_last10 = [], []
@@ -53,6 +54,9 @@ def process_data(rawData):
         g5.append(b[4])
         g6.append(b[5])
 
+        bug.append(d["answers"][15])
+        bugdesc.append(d["answers"][16])
+
         # Calculate proportions of valid moves (from total):
         count_gram = sum([is_grammatical(a,b) and has_noun(a) for a in d["moves"]])
         count_w_noun = sum([has_noun(a) for a in d["moves"]])
@@ -81,8 +85,8 @@ def process_data(rawData):
             "gaming_frequency": gaming_frequency,
             "imi1": imi1, "imi2": imi2, "imi3": imi3, "imi4": imi4, "imi5": imi5, "imi6": imi6, "imi7": imi7,
             "g-rbs": g1, "g-brs": g2, "g-bfs": g3, "g-frs": g4, "g-rfs": g5, "g-fbs": g6,
-            "bug": d["answers"][15],
-            "bugdesc": d["answers"][16],
+            "bug": bug,
+            "bugdesc": bugdesc,
             "imi_enjoyment": imi_enjoyment,
             "total_moves" : total_moves,
             "moves_with_noun": moves_with_noun,

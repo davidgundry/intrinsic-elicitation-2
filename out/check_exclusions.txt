@@ -1,0 +1,8 @@
+Analysing dataset data 
+
+Excluded due to moves < 16 = 1
+Excluded due reporting bugs 1
+Excluded due to language 0 (should be 0 as already excluded)
+Total count 4
+Count in game condition 1
+Count in tool condition 3

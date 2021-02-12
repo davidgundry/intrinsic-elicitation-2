@@ -111,12 +111,13 @@ def gaming_frequency_bar_plot(df):
     boxplot.set_ylabel("Count")
     plt.savefig('out/gaming_frequency+'+dataset+'.pdf', bbox_inches='tight')
 
-
+minimum_moves = 16
 dataset = 'data'
 print("Analysing dataset", dataset, "\n")
 rawData = load_data("data/"+dataset)
 df = process_data(rawData)
-df = df[df['total_moves']>=10]
+df = df[df['total_moves']>=minimum_moves]
+df = df[df['bug'] == "nobug"]
 
 gameCondition = df[df['version']=='Game']
 toolCondition = df[df['version']=='Tool']

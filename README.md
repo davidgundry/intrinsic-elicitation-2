@@ -106,7 +106,7 @@ After processing, the data (`data.json`) looks like this:
     19,female
     58,male
 
-This also includes participants who are excluded from the hypothesis tests due to too few inputs. If this were not the case, it would prevent changing the minimum-input threshold after data collection (for example, if it becomes clear that the threshold as set is too high) due to the excluded data already being deleted during the process of anonymisation. Either we might not record all the age/genders (if the threshold is lowered), or we record too many age/genders. As we want to publish `data.json` including particpants excluded due to low input (to allow re-running the analysis with different thresholds), it seems better to record the age/genders that match to this potential superset and accept that the counts may not add up to exactly the same number.
+This also includes participants who are excluded from the hypothesis tests due to too few inputs. (This also applies to participants who reported bugs). If this were not the case, it would prevent changing the minimum-input threshold after data collection (for example, if it becomes clear that the threshold as set is too high) due to the excluded data already being deleted during the process of anonymisation. Either we might not record all the age/genders (if the threshold is lowered), or we record too many age/genders. As we want to publish `data.json` including particpants excluded due to low input (to allow re-running the analysis with different thresholds), it seems better to record the age/genders that match to this potential superset and accept that the counts may not add up to exactly the same number.
 
 ### Duration
 
@@ -118,11 +118,13 @@ This also includes participants who are excluded from the hypothesis tests due t
 
 Because the duration of play was controlled at 480 seconds (8 minutes), the variation that is observed here is accounted for by the time spent in the tutorial. To see the time spent while moves were being logged in the main game, see the `playDuration` variable in `data.json`. This `duration` is separated from the rest of the data as (in principle) a player who spent an exceptional amount of time in the tutorial could have their data identified in combination with Prolfic's log data. (`playDuration` is fixed to almost exactly 480 seconds, so there is no such threat.)
 
-This also includes participants who are excluded from the hypothesis tests due to too few inputs as above.
+This also includes participants who are excluded from the hypothesis tests due to too few inputs (or reporting bugs) as above.
 
 ## Analysis
 
 In the project directory (for this experiment) run the following commands (on Linux). These create (or overwrite) files in `out/`).
+
+    python python/check_exclusions.py > out/check_exclusions.txt
 
     python python/create_data_csv.py
     
