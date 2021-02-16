@@ -23,13 +23,40 @@ Pre-registration documents are found in `design/`. Dated uploads to OSF (which s
 
     R CMD BATCH --quiet r/power-analysis.r out/power-analysis.Rout
 
-//TODO: I've updated the local preregistration file, need to upload to OSF and commit
-
-### Why 17 inputs?
+### Why 16 inputs?
 
 Looking at the data from experiment 1, we found the game condition had slower input times. We found the value of 2.5 standard deviations above the mean for this group (above which you'd expect only approximately 0.6% of the data). This was equivalent to 29.5 seconds per input. Over 8 minutes this works out to 16.25 inputs. Rounding down gives 16 inputs over 8 minutes. 
 
+## Data Collection
+
+Data collection began at 14:35 on 15 Feb 2021 and ended at 19:40.
+
+10 participant records were collected to ensure everything was functioning as it should. It was found that the average completion time was greater than 10 minutes. Before continuing, the study duration (time paid to participants) was increased to 12 minutes at £6:00 per hour = £1.20 A bonus payment of £0.20 was given to the original 10 participants.
+
+Due to unexpectedly high number of exclusions (<16 moves and bugs), we ended up recruiting 35 more participants than originally planned. At 185 participants we ran out of money for the study. This meant we had not achieved our target sample size of at least 68 in each condition. We had 67 (a subsequent removal due to a participant returning their data reduced this to 66). 
+
+* 185 submission recorded on Prolific (A further 26 participants began the study but returned their submission without submitting data, 1 participant returned their submission after submitting data. 6 participants timed out)
+* 181 records retrieved from database (as there were 4 NOCODE submissions, presumably these were the missing records)
+* Of these 1 returned their submission on Prolific even though it had been correctly submitted. This was removed before processing.
+* 180 records were processed.
+
+During (automated) processing:
+
+* 0 participants were excluded due to missing prolific ids
+* 9 were excluded from data because of language set to "other". As this would make them more identifiable in the final data (and they cannot be used for the analysis), they are not included in the published data.
+
+The published dataset contains 171 records.
+
+For the hypothesis tests:
+
+* 7 removed due to < 16 moves
+* 25 removed due to bugs
+
+This leaves 139 records for hypothesis tests.
+
 ## Data Source
+
+Data downloaded from [Restdb.io](https://restdb.io) using the script [get-restdb-data](https://github.com/davidgundry/get-restdb-data).
 
 ### Pre-anonymised Data Format
 

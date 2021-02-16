@@ -1,5 +1,7 @@
 Analysing dataset age-gender 
 
-male      3
-female    3
+female    106
+male       62
+prefer      2
+other       1
 Name: gender, dtype: int64

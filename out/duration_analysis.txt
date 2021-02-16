@@ -1,5 +1,5 @@
 Analysing dataset duration 
 
-game condition: mean 481.424 sd 1.0
-tool condition: mean 484.424 sd 1.0
-Ttest_indResult(statistic=-3.6742346141747673, pvalue=0.021311641128756727) -3.0
+game condition: mean 593.617393258427 sd 42.36188328358676
+tool condition: mean 501.4452073170732 sd 12.907908077291134
+Ttest_indResult(statistic=18.907041620723056, pvalue=1.4796146156679431e-43) 2.8941411344058467

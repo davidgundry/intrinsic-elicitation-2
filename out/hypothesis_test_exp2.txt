@@ -3,28 +3,32 @@ Analysing dataset data
 Hypothesis 1: Enjoyment (DV1) will be greater in the game condition than the task condition.
     A one-tailed two-sample t-test will be used to test whether the mean scores of DV1 is greater
     in the game condition than the task condition. α = 0.05.
-Game mean 2.142857142857143 sd 0.6060915267313266
-mean Tool 2.5238095238095237 sd 0.2973808570665905
-one tailed t test: p = 0.19972061196496843 ; t = -0.9797958971132709 ; significant = False ; d = -0.8944271909999155 
+Game mean 3.7662337662337664 sd 1.0718713703717067
+mean Tool 2.9921722113502938 sd 1.061298783685983
+one tailed t test: p = 1.787992103583029e-05 ; t = 4.273765262057168 ; significant = True ; d = 0.72591315542366 
 
 
 Hypothesis 2: Proportion of valid data (DV2) will be lower in the game condition
     than the task condition. A two-tailed Mann-Whitney U test will be used to test
     whether the distribution of DV2 differs significantly between the game condition
     than the task condition. α = 0.05
-Game mean 0.25 sd 0.21213203435596428
-mean Tool 0.26666666666666666 sd 0.37859388972001823
-Mann-Whitney U test: p = 0.5 ; U = 2.5 ; significant = False ; d = -0.05012547071170854 
+Game mean 0.29393939393939394 sd 0.2811398709532802
+mean Tool 0.4410958904109589 sd 0.3031481194795505
+Mann-Whitney U test: p = 0.0015901474347962648 ; U = 1714.5 ; significant = True ; d = -0.5023906611405031 
 
 
 Hypothesis 3: Time per input (DV3) will be higher in the game condition than
     the task condition. A two-tailed two-sample t-test will be used to test whether
     scores of DV3 are greater in the game condition than the task condition. α =
     0.05
-Game mean 0.4105263157894737 sd 0.014886458551295705
-mean Tool 0.4 sd 0.0
-two tailed t test: p = 0.27222840122441816 ; t = 1.341640786499867 ; significant = False ; d = 1.224744871391589 
+Game mean 0.25609001800816883 sd 0.08446961376752006
+mean Tool 0.16458045885318776 sd 0.05501532179852754
+two tailed t test: p = 3.4315224539303557e-12 ; t = 7.6375639670438416 ; significant = True ; d = 1.2972654835043866 
 
 
-every-day    5
+every-day               44
+several-times-a-week    35
+almost-never            26
+about-once-a-week       19
+about-once-a-month      15
 Name: gaming_frequency, dtype: int64
