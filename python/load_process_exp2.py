@@ -25,9 +25,9 @@ def process_data(rawData):
     bug, bugdesc = [], []
     grammatical_moves, moves_with_noun, total_moves = [], [] ,[]
     proportion_of_valid_data, proportion_of_valid_data_providing_mechanic_actuations = [], []
-    grammatical_moves_last10, moves_with_noun_last10 = [], []
-    proportion_of_valid_data_last10 = []
-    proportion_of_valid_data_providing_mechanic_actuations_last10 = []
+    grammatical_moves_last16, moves_with_noun_last16 = [], []
+    proportion_of_valid_data_last16 = []
+    proportion_of_valid_data_providing_mechanic_actuations_last16 = []
     time_per_input_from_moveDurations = []
     time_per_input_from_8min = []
     for i, d in enumerate(data):
@@ -67,14 +67,13 @@ def process_data(rawData):
         proportion_of_valid_data.append(count_gram/count_all)
         proportion_of_valid_data_providing_mechanic_actuations.append(count_gram/count_w_noun)
 
-        # Calculate proportions of valid moves (from last 10):
-        # TODO: should be last 16
-        count_gram_last_10 = sum([is_grammatical(a,b) and has_noun(a) for a in d["moves"][-10:]])
-        count_w_noun_last_10 = sum([has_noun(a) for a in d["moves"][-10:]])
-        grammatical_moves_last10.append(count_gram_last_10)
-        moves_with_noun_last10.append(count_w_noun_last_10)
-        proportion_of_valid_data_last10.append(count_gram_last_10/10)
-        proportion_of_valid_data_providing_mechanic_actuations_last10.append(count_gram_last_10/count_w_noun_last_10)
+        # Calculate proportions of valid moves (from last 16):
+        count_gram_last_16 = sum([is_grammatical(a,b) and has_noun(a) for a in d["moves"][-16:]])
+        count_w_noun_last_16 = sum([has_noun(a) for a in d["moves"][-16:]])
+        grammatical_moves_last16.append(count_gram_last_16)
+        moves_with_noun_last16.append(count_w_noun_last_16)
+        proportion_of_valid_data_last16.append(count_gram_last_16/16)
+        proportion_of_valid_data_providing_mechanic_actuations_last16.append(count_gram_last_16/count_w_noun_last_16)
 
         #Calculate Time per input
         time_per_input_from_moveDurations.append(sum(d["moveDurations"])/len(d["moveDurations"]))
@@ -94,10 +93,10 @@ def process_data(rawData):
             "grammatical_moves": grammatical_moves,
             "proportion_of_valid_data_total" : proportion_of_valid_data,
             "proportion_of_valid_data_providing_mechanic_actuations_total": proportion_of_valid_data_providing_mechanic_actuations,
-            "moves_with_noun_last10": moves_with_noun_last10,
-            "grammatical_moves_last10": grammatical_moves_last10,
-            "proportion_of_valid_data_last10" : proportion_of_valid_data_last10,
-            "proportion_of_valid_data_providing_mechanic_actuations_last10": proportion_of_valid_data_providing_mechanic_actuations_last10,
+            "moves_with_noun_last16": moves_with_noun_last16,
+            "grammatical_moves_last16": grammatical_moves_last16,
+            "proportion_of_valid_data_last16" : proportion_of_valid_data_last16,
+            "proportion_of_valid_data_providing_mechanic_actuations_last16": proportion_of_valid_data_providing_mechanic_actuations_last16,
             "time_per_input_from_moveDurations": time_per_input_from_moveDurations,
             "time_per_input_from_8min": time_per_input_from_8min
         }

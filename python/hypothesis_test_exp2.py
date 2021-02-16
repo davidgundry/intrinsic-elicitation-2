@@ -42,8 +42,8 @@ def hypothesis_test_2(game, tool):
     than the task condition. A two-tailed Mann-Whitney U test will be used to test
     whether the distribution of DV2 differs significantly between the game condition
     than the task condition. α = 0.05""")
-    c0 = game['proportion_of_valid_data_last10']
-    c1 = tool['proportion_of_valid_data_last10']
+    c0 = game['proportion_of_valid_data_last16']
+    c1 = tool['proportion_of_valid_data_last16']
     alpha = 0.05
     mwu = mannwhitneyu(c0, c1)
     n0 = len(c0)
@@ -86,12 +86,12 @@ def enjoyment_box_plot(df):
 
 def valid_proportion_all_data_boxplot(df):
     plt.clf()
-    boxplot = df.boxplot(column='proportion_of_valid_data_last10', by='version', grid=False)
+    boxplot = df.boxplot(column='proportion_of_valid_data_last16', by='version', grid=False)
     plt.suptitle('')
     plt.title("")
     boxplot.set_xlabel("")
-    boxplot.set_ylabel("Proportion of Valid Data (last 10)")
-    plt.savefig('out/prop_valid_data_last10_per_condition+'+dataset+'.pdf', bbox_inches='tight')
+    boxplot.set_ylabel("Proportion of Valid Data (last 16)")
+    plt.savefig('out/prop_valid_data_last16_per_condition+'+dataset+'.pdf', bbox_inches='tight')
 
 def time_per_input_boxplot(df):
     plt.clf()

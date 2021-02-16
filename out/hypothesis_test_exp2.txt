@@ -12,9 +12,9 @@ Hypothesis 2: Proportion of valid data (DV2) will be lower in the game condition
     than the task condition. A two-tailed Mann-Whitney U test will be used to test
     whether the distribution of DV2 differs significantly between the game condition
     than the task condition. α = 0.05
-Game mean 0.29393939393939394 sd 0.2811398709532802
-mean Tool 0.4410958904109589 sd 0.3031481194795505
-Mann-Whitney U test: p = 0.0015901474347962648 ; U = 1714.5 ; significant = True ; d = -0.5023906611405031 
+Game mean 0.3162878787878788 sd 0.25473373822341905
+mean Tool 0.4280821917808219 sd 0.28653810118108675
+Mann-Whitney U test: p = 0.009493266712897325 ; U = 1854.0 ; significant = True ; d = -0.4111405775344552 
 
 
 Hypothesis 3: Time per input (DV3) will be higher in the game condition than
