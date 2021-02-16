@@ -22,7 +22,7 @@
 import random
 import re
 
-filename = "raw/debug-example.json"
+filename = "raw/all-data-returnedremoved-2021-02-16.json"
 
 def shuffle(filename):
     with open(filename) as f:
@@ -91,7 +91,7 @@ def removeMarkers(filename):
 def createDurationCSV(filename):
     with open(filename) as f:
         content = f.read()
-    content = re.sub('.+(Normal|Tool)","duration":([0-9\.]+).+', r'\1,\2', content)
+    content = re.sub('.+(normal|tool)","duration":([0-9\.]+).+', r'\1,\2', content)
     outputFile = "data/duration.csv"
     with open(outputFile, "w") as f:
         f.write(content)

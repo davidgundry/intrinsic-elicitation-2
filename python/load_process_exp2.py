@@ -68,6 +68,7 @@ def process_data(rawData):
         proportion_of_valid_data_providing_mechanic_actuations.append(count_gram/count_w_noun)
 
         # Calculate proportions of valid moves (from last 10):
+        # TODO: should be last 16
         count_gram_last_10 = sum([is_grammatical(a,b) and has_noun(a) for a in d["moves"][-10:]])
         count_w_noun_last_10 = sum([has_noun(a) for a in d["moves"][-10:]])
         grammatical_moves_last10.append(count_gram_last_10)

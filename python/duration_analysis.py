@@ -41,8 +41,8 @@ dataset = 'duration'
 print("Analysing dataset", dataset, "\n")
 df=  pd.read_csv("data/"+dataset+".csv", names=["version","duration"])
 
-gameCondition = df[df['version']=='Normal']
-toolCondition = df[df['version']=='Tool']
+gameCondition = df[df['version']=='normal']
+toolCondition = df[df['version']=='tool']
 
 duration_histogram(gameCondition,toolCondition)
 duration_boxplot(df)

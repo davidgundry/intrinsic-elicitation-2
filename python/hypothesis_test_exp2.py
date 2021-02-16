@@ -119,8 +119,8 @@ df = process_data(rawData)
 df = df[df['total_moves']>=minimum_moves]
 df = df[df['bug'] == "nobug"]
 
-gameCondition = df[df['version']=='Game']
-toolCondition = df[df['version']=='Tool']
+gameCondition = df[df['version']=='normal']
+toolCondition = df[df['version']=='tool']
 
 hypothesis_test_1(gameCondition, toolCondition)
 hypothesis_test_2(gameCondition, toolCondition)

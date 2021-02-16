@@ -22,8 +22,8 @@ before_language = len(df.index)
 df = df[df['language'] == "english"]
 print("Excluded due to language", before_language - len(df.index), "(should be 0 as already excluded)")
 
-gameCondition = df[df['version']=='Game']
-toolCondition = df[df['version']=='Tool']
+gameCondition = df[df['version']=='normal']
+toolCondition = df[df['version']=='tool']
 
 print("Total count", len(df.index))
 print("Count in game condition", len(gameCondition.index))
