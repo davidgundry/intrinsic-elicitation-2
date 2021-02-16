@@ -54,6 +54,8 @@ For the hypothesis tests:
 
 This leaves 139 records for hypothesis tests.
 
+The raw data has now (16/02/2021) been deleted in line with the anonymisation procedure specified in the ethics application.
+
 ## Data Source
 
 Data downloaded from [Restdb.io](https://restdb.io) using the script [get-restdb-data](https://github.com/davidgundry/get-restdb-data).
