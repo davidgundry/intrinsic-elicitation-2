@@ -13,9 +13,8 @@ This is a repository of materials and data for the Enjoyment and Data Collection
 * `design/` - ethics, preregistration documents, etc.
 * `final/` - versions of documents that have been officially submitted somewhere
 * `materials/` - contains materials that were used in the experiment
-* `design/` - ethics?
-
-//TODO: screenshots and video figure to show gameplay
+* `design/` - ethics and preregistration documents
+* `img/` - screenshots and video figures
 
 ## Pre-Registration
 
