@@ -46,8 +46,8 @@ def hypothesis_test_2(game, tool):
     than the task condition. A two-tailed Mann-Whitney U test will be used to test
     whether the distribution of DV2 differs significantly between the game condition
     than the task condition. α = 0.05""")
-    c0 = game['proportion_of_valid_data_last16']
-    c1 = tool['proportion_of_valid_data_last16']
+    c0 = game['proportion_of_valid_data_last16_userjudgement']
+    c1 = tool['proportion_of_valid_data_last16_userjudgement']
     alpha = 0.05
     mwu = mannwhitneyu(c0, c1)
     n0 = len(c0)
@@ -105,17 +105,17 @@ def enjoyment_raincloud(df):
     ax.set_ylabel("IMI Enjoyment")
     plt.savefig('out/imi_enjoyment_per_condition_raincloud+'+dataset+'.pdf', bbox_inches='tight')
 
-def valid_proportion_all_data_boxplot(df):
+def valid_proportion_all_data_userjudgement_boxplot(df):
     plt.clf()
-    boxplot = df.boxplot(column='proportion_of_valid_data_last16', by='version', grid=False)
+    boxplot = df.boxplot(column='proportion_of_valid_data_last16_userjudgement', by='version', grid=False)
     plt.suptitle('')
     plt.title("")
     boxplot.set_xlabel("")
-    boxplot.set_ylabel("Proportion of Valid Data (last 16)")
-    plt.savefig('out/prop_valid_data_last16_per_condition+'+dataset+'.pdf', bbox_inches='tight')
+    boxplot.set_ylabel("Proportion of Valid Data (last 16, userjudgement)")
+    plt.savefig('out/prop_valid_data_last16_userjudgement_per_condition+'+dataset+'.pdf', bbox_inches='tight')
 
-def valid_proportion_all_data_raincloud(df):
-    dy="proportion_of_valid_data_last16"; dx="version"; ort="v"; pal = sns.color_palette(n_colors=2)
+def valid_proportion_all_data_userjudgement_raincloud(df):
+    dy="proportion_of_valid_data_last16_userjudgement"; dx="version"; ort="v"; pal = sns.color_palette(n_colors=2)
     f, ax = plt.subplots(figsize=(7, 5))
     ax=pt.half_violinplot( x = dx, y = dy, data = df, palette = pal, bw = .2, cut = 0.,
                         scale = "area", width = .6, inner = None, orient = ort)
@@ -127,8 +127,24 @@ def valid_proportion_all_data_raincloud(df):
                 saturation = 1, orient = ort)
     plt.xticks(plt.xticks()[0], ["Game","Control"])
     ax.set_xlabel("")
-    ax.set_ylabel("Proportion of Valid Data (last 16)")
-    plt.savefig('out/prop_valid_data_last16_per_condition_raincloud+'+dataset+'.pdf', bbox_inches='tight')
+    ax.set_ylabel("Proportion of Valid Data (last 16, userjudgement)")
+    plt.savefig('out/prop_valid_data_last16_userjudgement_per_condition_raincloud+'+dataset+'.pdf', bbox_inches='tight')
+
+def valid_proportion_all_data_idealised_raincloud(df):
+    dy="proportion_of_valid_data_last16_idealised"; dx="version"; ort="v"; pal = sns.color_palette(n_colors=2)
+    f, ax = plt.subplots(figsize=(7, 5))
+    ax=pt.half_violinplot( x = dx, y = dy, data = df, palette = pal, bw = .2, cut = 0.,
+                        scale = "area", width = .6, inner = None, orient = ort)
+    ax=sns.stripplot( x = dx, y = dy, data = df, palette = pal, edgecolor = "white",
+                    size = 3, jitter = 1, zorder = 0, orient = ort)
+    ax=sns.boxplot( x = dx, y = dy, data = df, color = "black", width = .15, zorder = 10,\
+                showcaps = True, boxprops = {'facecolor':'none', "zorder":10},\
+                showfliers=True, whiskerprops = {'linewidth':2, "zorder":10},\
+                saturation = 1, orient = ort)
+    plt.xticks(plt.xticks()[0], ["Game","Control"])
+    ax.set_xlabel("")
+    ax.set_ylabel("Proportion of Valid Data (last 16, idealised)")
+    plt.savefig('out/prop_valid_data_last16_idealised_per_condition_raincloud+'+dataset+'.pdf', bbox_inches='tight')
 
 
 def time_per_input_boxplot(df):
@@ -182,8 +198,9 @@ hypothesis_test_2(gameCondition, toolCondition)
 hypothesis_test_3(gameCondition, toolCondition)
 enjoyment_box_plot(df)
 enjoyment_raincloud(df)
-valid_proportion_all_data_boxplot(df)
-valid_proportion_all_data_raincloud(df)
+valid_proportion_all_data_userjudgement_boxplot(df)
+valid_proportion_all_data_userjudgement_raincloud(df)
+valid_proportion_all_data_idealised_raincloud(df)
 time_per_input_boxplot(df)
 time_per_input_raincloud(df)
 gaming_frequency_bar_plot(df)
