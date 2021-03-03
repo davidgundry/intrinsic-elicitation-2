@@ -26,6 +26,7 @@ def process_data(rawData):
     grammatical_moves_userjudgement, grammatical_moves_idealised, moves_with_noun, total_moves = [], [] ,[], []
     proportion_of_valid_data_userjudgement, proportion_of_valid_data_providing_mechanic_actuations_userjudgement = [], []
     proportion_of_valid_data_idealised, proportion_of_valid_data_providing_mechanic_actuations_idealised = [], []
+    proportion_of_valid_data_first20_idealised = []
     grammatical_moves_last16_userjudgement, grammatical_moves_last16_idealised, moves_with_noun_last16 = [], [], []
     proportion_of_valid_data_last16_userjudgement = []
     proportion_of_valid_data_providing_mechanic_actuations_last16_userjudgement = []
@@ -63,6 +64,7 @@ def process_data(rawData):
         # Calculate proportions of valid moves (from total):
         count_gram_userjudgement = sum([is_grammatical_userjudgement(a,b) and has_noun(a) for a in d["moves"]])
         count_gram_idealised = sum([is_grammatical_idealised(a) and has_noun(a) for a in d["moves"]])
+        count_gram_first20_idealised = sum([is_grammatical_idealised(a) and has_noun(a) for a in d["moves"][:20]])
         count_w_noun = sum([has_noun(a) for a in d["moves"]])
         count_all = len(d["moves"])
         total_moves.append(count_all)
@@ -71,6 +73,7 @@ def process_data(rawData):
         moves_with_noun.append(count_w_noun)
         proportion_of_valid_data_userjudgement.append(count_gram_userjudgement/count_all)
         proportion_of_valid_data_idealised.append(count_gram_idealised/count_all)
+        proportion_of_valid_data_first20_idealised.append(count_gram_first20_idealised/20)
         proportion_of_valid_data_providing_mechanic_actuations_userjudgement.append(count_gram_userjudgement/count_w_noun)
         proportion_of_valid_data_providing_mechanic_actuations_idealised.append(count_gram_idealised/count_w_noun)
 
@@ -106,6 +109,7 @@ def process_data(rawData):
             "grammatical_moves_idealised": grammatical_moves_idealised,
             "proportion_of_valid_data_total_userjudgement" : proportion_of_valid_data_userjudgement,
             "proportion_of_valid_data_total_idealised" : proportion_of_valid_data_idealised,
+            "proportion_of_valid_data_first20_idealised" : proportion_of_valid_data_first20_idealised,
             "proportion_of_valid_data_providing_mechanic_actuations_total_userjudgement": proportion_of_valid_data_providing_mechanic_actuations_userjudgement,
             "proportion_of_valid_data_providing_mechanic_actuations_total_idealised": proportion_of_valid_data_providing_mechanic_actuations_idealised,
             "moves_with_noun_last16": moves_with_noun_last16,
