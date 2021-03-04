@@ -1,0 +1,11 @@
+Analysing dataset data 
+
+Hypothesis: Number of moves will be lower in the game condition
+    than the task condition. A two-tailed Mann-Whitney U test will be used to test
+    whether the distribution of number of moves differs significantly between the game condition
+    than the task condition. α = 0.05
+Game mean 32.91549295774648 sd 11.791942138442602
+mean Tool 52.026666666666664 sd 17.349330802059175
+Mann-Whitney U test: p = 2.0699729379590933e-12 ; U = 892.0 ; significant = True ; d = -1.281867505373504 
+
+
