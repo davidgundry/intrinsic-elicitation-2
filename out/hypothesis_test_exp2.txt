@@ -21,9 +21,9 @@ Hypothesis 3: Time per input (DV3) will be higher in the game condition than
     the task condition. A two-tailed two-sample t-test will be used to test whether
     scores of DV3 are greater in the game condition than the task condition. α =
     0.05
-Game mean 0.25609001800816883 sd 0.08446961376752006
-mean Tool 0.16458045885318776 sd 0.05501532179852754
-two tailed t test: p = 3.4315224539303557e-12 ; t = 7.6375639670438416 ; significant = True ; d = 1.2972654835043866 
+Game mean 15.365401080490129 sd 5.068176826051204
+mean Tool 9.874827531191267 sd 3.3009193079116526
+two tailed t test: p = 3.431522453930169e-12 ; t = 7.63756396704385 ; significant = True ; d = 1.2972654835043862 
 
 
 every-day               44
