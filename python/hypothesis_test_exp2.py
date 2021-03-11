@@ -79,6 +79,23 @@ def hypothesis_test_3(game, tool):
     print("mean Tool" ,mean(c1), "sd", stdev(c1))
     print("two tailed t test: p =", ttest.pvalue, "; t =",ttest.statistic, "; significant =",(ttest.pvalue < alpha), "; d =",cohens_d, "\n\n")
 
+
+def hypothesis_betterthanrandom_correctform(cat1):
+    print("""Hypothesis: Proportion of valid data-providing mechanic actuations (measured using _correctform)
+    will be greater in the game condition than what would be expected if ordering was random. A two-tailed one-sample
+    t-test will be used to compare DV2 for the game condition against the theoretical mean expected if
+    players provided word orderings that were completely random. This is given below. α = 0.05
+
+    Theoretical random proportion = (valid permutations / total permutations of 3 words) = 1/6 = 16.67%""")
+    alpha = 0.05
+    c0 = cat1['proportion_of_valid_data_providing_mechanic_actuations_last16_idealised'] # Yes, this is using _correctform.
+    ttest = ttest_1samp(c0, 1/6)
+    cohens_d = (mean(c0) - (1/6)) / stdev(c0)
+    print("Game mean" ,mean(c0), "sd" ,stdev(c0))
+    print("two tailed, 1 sample t test: p =", ttest.pvalue, "; t =", ttest.statistic, "; significant =", (ttest.pvalue < alpha), "; d =",cohens_d, "\n\n")
+
+
+
 def enjoyment_box_plot(df):
     plt.clf()
     boxplot = df.boxplot(column='imi_enjoyment', by='version', grid=False)
@@ -196,6 +213,7 @@ toolCondition = df[df['version']=='tool']
 hypothesis_test_1(gameCondition, toolCondition)
 hypothesis_test_2(gameCondition, toolCondition)
 hypothesis_test_3(gameCondition, toolCondition)
+hypothesis_betterthanrandom_correctform(gameCondition)
 enjoyment_box_plot(df)
 enjoyment_raincloud(df)
 valid_proportion_all_data_userjudgement_boxplot(df)
