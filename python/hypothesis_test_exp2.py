@@ -40,6 +40,9 @@ def hypothesis_test_1(game, tool):
     print("Game mean" ,mean(c0), "sd" ,stdev(c0))
     print("mean Tool" ,mean(c1), "sd", stdev(c1))
     print("one tailed t test: p =", p, "; t =",ttest.statistic, "; significant =",(p < alpha) and (ttest.statistic > 0), "; d =",cohens_d, "\n\n")
+    mwu = mannwhitneyu(c0, c1, alternative='greater')
+    print("Mann-Whitney U test: p =", mwu.pvalue, "; U =",mwu.statistic, "; significant =",(mwu.pvalue < alpha), "; d =",cohens_d, "\n\n")
+
 
 def hypothesis_test_2(game, tool):
     print("""Hypothesis 2: Proportion of valid data (DV2) will be lower in the game condition
@@ -78,6 +81,8 @@ def hypothesis_test_3(game, tool):
     print("Game mean" ,mean(c0), "sd" ,stdev(c0))
     print("mean Tool" ,mean(c1), "sd", stdev(c1))
     print("two tailed t test: p =", ttest.pvalue, "; t =",ttest.statistic, "; significant =",(ttest.pvalue < alpha), "; d =",cohens_d, "\n\n")
+    mwu = mannwhitneyu(c0, c1)
+    print("Mann-Whitney U test: p =", mwu.pvalue, "; U =",mwu.statistic, "; significant =",(mwu.pvalue < alpha), "; d =",cohens_d, "\n\n")
 
 
 def hypothesis_betterthanrandom_correctform(cat1):
