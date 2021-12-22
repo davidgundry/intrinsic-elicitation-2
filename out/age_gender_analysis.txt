@@ -5,3 +5,5 @@ male       62
 prefer      2
 other       1
 Name: gender, dtype: int64
+Mean age 33.526315789473685
+Median age 31.0
