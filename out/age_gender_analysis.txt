@@ -7,3 +7,5 @@ other       1
 Name: gender, dtype: int64
 Mean age 33.526315789473685
 Median age 31.0
+Min age 18
+Max age 70
