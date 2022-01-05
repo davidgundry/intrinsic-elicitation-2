@@ -2,7 +2,11 @@
 
 Intrinsic Elicitation Experiment 2: Enjoyment and data quality in a game for human-subject data collection
 
-This is a repository of materials and data for the Enjoyment and Data Collection in an Applied Game study.
+This is a repository of materials and data for the Enjoyment and Data Collection in an Applied Game study. It is also hosted on OSF at [https://osf.io/jac6s/](https://osf.io/jac6s/).
+
+This experiment is to be published in the following conference paper:
+
+    David Gundry and Sebastian Deterding. 2022. Trading Accuracy for Enjoyment? Data Quality and Player Experience in Data Collection Games. In CHI Conference on Human Factors in Computing Systems (CHI ’22), April 29-May 5, 2022, New Orleans, LA, USA. ACM, New York, NY, USA, 14 pages. [https://doi.org/10.1145/3491102.3502025](https://doi.org/10.1145/3491102.3502025)
 
 ## Directory Structure
 
@@ -13,8 +17,8 @@ This is a repository of materials and data for the Enjoyment and Data Collection
 * `design/` - ethics, preregistration documents, etc.
 * `final/` - versions of documents that have been officially submitted somewhere
 * `materials/` - contains materials that were used in the experiment
-* `design/` - ethics and preregistration documents
 * `img/` - screenshots and video figures
+* `raw/` - raw data stored here before processing and anonymisation
 
 ## Pre-Registration
 
