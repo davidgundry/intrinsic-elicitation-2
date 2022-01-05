@@ -6,7 +6,7 @@ This is a repository of materials and data for the Enjoyment and Data Collection
 
 This experiment is to be published in the following conference paper:
 
-    David Gundry and Sebastian Deterding. 2022. Trading Accuracy for Enjoyment? Data Quality and Player Experience in Data Collection Games. In CHI Conference on Human Factors in Computing Systems (CHI ’22), April 29-May 5, 2022, New Orleans, LA, USA. ACM, New York, NY, USA, 14 pages. [https://doi.org/10.1145/3491102.3502025](https://doi.org/10.1145/3491102.3502025)
+> David Gundry and Sebastian Deterding. 2022. Trading Accuracy for Enjoyment? Data Quality and Player Experience in Data Collection Games. In CHI Conference on Human Factors in Computing Systems (CHI ’22), April 29-May 5, 2022, New Orleans, LA, USA. ACM, New York, NY, USA, 14 pages. [https://doi.org/10.1145/3491102.3502025](https://doi.org/10.1145/3491102.3502025)
 
 ## Directory Structure
 
