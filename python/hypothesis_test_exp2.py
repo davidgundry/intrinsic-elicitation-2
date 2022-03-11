@@ -52,7 +52,7 @@ def hypothesis_test_2(game, tool):
     c0 = game['proportion_of_valid_data_last16_userjudgement']
     c1 = tool['proportion_of_valid_data_last16_userjudgement']
     alpha = 0.05
-    mwu = mannwhitneyu(c0, c1)
+    mwu = mannwhitneyu(c0, c1, alternative='two-sided')
     n0 = len(c0)
     n1 = len(c1)
     cond0 = (n0 - 1) * (stdev(c0) ** 2)
@@ -81,7 +81,7 @@ def hypothesis_test_3(game, tool):
     print("Game mean" ,mean(c0), "sd" ,stdev(c0))
     print("mean Tool" ,mean(c1), "sd", stdev(c1))
     print("two tailed t test: p =", ttest.pvalue, "; t =",ttest.statistic, "; significant =",(ttest.pvalue < alpha), "; d =",cohens_d, "\n\n")
-    mwu = mannwhitneyu(c0, c1)
+    mwu = mannwhitneyu(c0, c1, alternative='two-sided')
     print("Mann-Whitney U test: p =", mwu.pvalue, "; U =",mwu.statistic, "; significant =",(mwu.pvalue < alpha), "; d =",cohens_d, "\n\n")
 
 

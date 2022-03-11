@@ -8,7 +8,7 @@ mean Tool 2.9921722113502938 sd 1.061298783685983
 one tailed t test: p = 1.787992103583029e-05 ; t = 4.273765262057168 ; significant = True ; d = 0.72591315542366 
 
 
-Mann-Whitney U test: p = 1.831886760169805e-05 ; U = 3387.0 ; significant = True ; d = 0.72591315542366 
+Mann-Whitney U test: p = 1.831886760169812e-05 ; U = 3387.0 ; significant = True ; d = 0.72591315542366 
 
 
 Hypothesis 2: Proportion of valid data (DV2) will be lower in the game condition
@@ -17,7 +17,7 @@ Hypothesis 2: Proportion of valid data (DV2) will be lower in the game condition
     than the task condition. α = 0.05
 Game mean 0.32007575757575757 sd 0.25606000261994244
 mean Tool 0.4280821917808219 sd 0.28653810118108675
-Mann-Whitney U test: p = 0.011624114351475912 ; U = 1872.0 ; significant = True ; d = -0.39634950633220056 
+Mann-Whitney U test: p = 0.023248228702951807 ; U = 1872.0 ; significant = True ; d = -0.39634950633220056 
 
 
 Hypothesis 3: Time per input (DV3) will be higher in the game condition than
@@ -25,11 +25,11 @@ Hypothesis 3: Time per input (DV3) will be higher in the game condition than
     scores of DV3 are greater in the game condition than the task condition. α =
     0.05
 Game mean 15.365401080490129 sd 5.068176826051204
-mean Tool 9.874827531191267 sd 3.3009193079116526
-two tailed t test: p = 3.431522453930169e-12 ; t = 7.63756396704385 ; significant = True ; d = 1.2972654835043862 
+mean Tool 9.874827531191267 sd 3.300919307911653
+two tailed t test: p = 3.431522453930169e-12 ; t = 7.63756396704385 ; significant = True ; d = 1.297265483504386 
 
 
-Mann-Whitney U test: p = 1.3398577539234673e-12 ; U = 751.0 ; significant = True ; d = 1.2972654835043862 
+Mann-Whitney U test: p = 2.6797155078469346e-12 ; U = 4067.0 ; significant = True ; d = 1.297265483504386 
 
 
 Hypothesis: Proportion of valid data-providing mechanic actuations (measured using _correctform)
