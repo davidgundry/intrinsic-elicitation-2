@@ -15,6 +15,7 @@ import matplotlib
 import matplotlib.pyplot as plt
 from statistics import mean, stdev
 from math import sqrt
+from scipy.stats import pearsonr, spearmanr
 
 import seaborn as sns
 sns.set(style="ticks", font_scale=1.5)
@@ -204,6 +205,40 @@ def gaming_frequency_bar_plot(df):
     boxplot.set_ylabel("Count")
     plt.savefig('out/gaming_frequency+'+dataset+'.pdf', bbox_inches='tight')
 
+def correlation(df):
+    print("\nExploratory: Correlation between accuracy (user judgement) and accuracy (ideal grammar)")
+    print("Pearson's r", pearsonr(df['proportion_of_valid_data_last16_userjudgement'], df['proportion_of_valid_data_last16_idealised'])) 
+    print("Spearman's rho", spearmanr(df['proportion_of_valid_data_last16_userjudgement'], df['proportion_of_valid_data_last16_idealised']))
+    print("Degrees of freedom", len(df['proportion_of_valid_data_last16_userjudgement']) - 2)
+    plt.clf()
+    plt.suptitle('')
+    plt.title("")
+    plt.xlabel("User Judgement")
+    plt.ylabel("Idealised Grammar")
+    plt.scatter(df['proportion_of_valid_data_last16_userjudgement'], df['proportion_of_valid_data_last16_idealised'])
+    plt.savefig('out/scatter-accuracy+'+dataset+'.pdf', bbox_inches='tight')
+
+def hypothesis_test_2_but_using_idealised_grammar(game, tool):
+    print("""\nExploratory version of Hypothesis 2 using idealised grammar instead: 
+    Proportion of valid data (DV2) will be lower in the game condition
+    than the task condition. A two-tailed Mann-Whitney U test will be used to test
+    whether the distribution of DV2 differs significantly between the game condition
+    than the task condition. α = 0.05""")
+    c0 = game['proportion_of_valid_data_last16_idealised']
+    c1 = tool['proportion_of_valid_data_last16_idealised']
+    alpha = 0.05
+    mwu = mannwhitneyu(c0, c1, alternative='two-sided')
+    n0 = len(c0)
+    n1 = len(c1)
+    cond0 = (n0 - 1) * (stdev(c0) ** 2)
+    cond1 = (n1 - 1) * (stdev(c1) ** 2)
+    pooledSD = sqrt((cond0 + cond1) / (n0 + n1 - 2))
+    cohens_d = (mean(c0) - mean(c1)) / pooledSD
+    print("Game mean" ,mean(c0), "sd" ,stdev(c0))
+    print("mean Tool" ,mean(c1), "sd", stdev(c1))
+    print("Mann-Whitney U test: p =", mwu.pvalue, "; U =",mwu.statistic, "; significant =",(mwu.pvalue < alpha), "; d =",cohens_d, "\n\n")
+
+
 minimum_moves = 16
 dataset = 'data'
 print("Analysing dataset", dataset, "\n")
@@ -228,3 +263,5 @@ time_per_input_boxplot(df)
 time_per_input_raincloud(df)
 gaming_frequency_bar_plot(df)
 print(df['gaming_frequency'].value_counts())
+correlation(df)
+hypothesis_test_2_but_using_idealised_grammar(gameCondition, toolCondition)

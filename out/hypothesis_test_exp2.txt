@@ -5,7 +5,7 @@ Hypothesis 1: Enjoyment (DV1) will be greater in the game condition than the tas
     in the game condition than the task condition. α = 0.05.
 Game mean 3.7662337662337664 sd 1.0718713703717067
 mean Tool 2.9921722113502938 sd 1.061298783685983
-one tailed t test: p = 1.787992103583029e-05 ; t = 4.273765262057168 ; significant = True ; d = 0.72591315542366 
+one tailed t test: p = 1.787992103583036e-05 ; t = 4.273765262057167 ; significant = True ; d = 0.72591315542366 
 
 
 Mann-Whitney U test: p = 1.831886760169812e-05 ; U = 3387.0 ; significant = True ; d = 0.72591315542366 
@@ -48,3 +48,19 @@ almost-never            26
 about-once-a-week       19
 about-once-a-month      15
 Name: gaming_frequency, dtype: int64
+
+Exploratory: Correlation between accuracy (user judgement) and accuracy (ideal grammar)
+Pearson's r PearsonRResult(statistic=0.7656514777303132, pvalue=4.955996590129204e-28)
+Spearman's rho SpearmanrResult(correlation=0.7589926796424162, pvalue=2.629885486088404e-27)
+Degrees of freedom 137
+
+Exploratory version of Hypothesis 2 using idealised grammar instead: 
+    Proportion of valid data (DV2) will be lower in the game condition
+    than the task condition. A two-tailed Mann-Whitney U test will be used to test
+    whether the distribution of DV2 differs significantly between the game condition
+    than the task condition. α = 0.05
+Game mean 0.3058712121212121 sd 0.24444029175942175
+mean Tool 0.4546232876712329 sd 0.30014830571298323
+Mann-Whitney U test: p = 0.0033724585036708455 ; U = 1715.5 ; significant = True ; d = -0.5406661564256534 
+
+
